@@ -12,7 +12,8 @@
      mobile 600 px 
      tablet 768 px
      desktop 992 px
-     smart_tv 1200 px*/
+     smart_tv 1200 px
+     paletadecores.com */
 
 html {
     height: 100vh;
@@ -110,6 +111,14 @@ article>p {
     text-indent: 17px;
 }
 
+footer {
+    text-align: center;
+    padding: 1em;
+    margin: auto;
+    color: white;
+}
+
+
 
 /* configuração e definição de imagens para mobile-first */
 
@@ -136,4 +145,11 @@ img#pc {
 
 img#tv{
     display: none;
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px){
+    body{
+        background-image: url(./assets/back-tablet.jpg);
+    }
 }
