@@ -7,13 +7,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*   #3f264d #5d2747 #9f3647 #db4648 #fb9553 
+/*   https://paletadecores.com/paleta/351330/424254/64908a/e8caa4/cc2a41/
      device breakpoints
      mobile 600 px 
      tablet 768 px
      desktop 992 px
-     smart_tv 1200 px
-     paletadecores.com */
+     smart_tv 1200 px */
 
 html {
     height: 100vh;
@@ -21,14 +20,14 @@ html {
 
 body{
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to bottom, #3f264d, #fb9553);
+    background-image: linear-gradient(to bottom, #424254, #64908a);
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: scroll;
 }
 
 header {
-    background-color: #3f264d;
+    background-color: #351330;
     margin-top: 3px;
     border-radius: 7px 7px 0px 0px;
     width: 90vw;
@@ -37,16 +36,16 @@ header {
 
 header>h1 {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #e8caa4;
     padding: 3px;
     margin-top: 17px;
 
 }
 
 #burger {
-    background-color: #3f264d;
+    background-color: #351330;
     display: block;
-    color: rgb(255, 255, 255);
+    color: #e8caa4;
     text-align: center;
     margin: auto;
     padding: 7px;
@@ -55,7 +54,8 @@ header>h1 {
 }
 
 #burger:hover {
-    background-color: #fb9553;
+    background-color: #cc2a41;
+    color: white;
 
 }
 
@@ -76,32 +76,34 @@ menu>ul>li>a {
     padding: 7px;
     text-decoration: none;
     text-align: center;
-    background-color: #3f264d;
+    background-color: #351330;
     border-radius: 0px 0px 0px 0px;
-    color: rgb(255, 255, 255);
+    color: #e8caa4;
     margin: auto;
 
 }
 
 menu>ul>li>a:hover {
-    background-color: #fb9553;
+    background-color: #cc2a41;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 
 main {
-    background-color: #fb9553;
+    background-color: #000000c7;
     width: 90vw;
     margin: auto;
     border-radius: 7px 7px 0px 0px;
     margin-top: 7px;
     padding: 3px;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.300);
+    color: white;
 
 }
 
 article>h2 {
-    padding-bottom: 17px;
+    padding-bottom: 1em;
 
 }
 
@@ -121,6 +123,11 @@ footer {
 
 
 /* configuração e definição de imagens para mobile-first */
+@media screen and (max-width:768px){
+    body{
+        background-image: url("/assets/back-phone.jpg");
+    }
+}
 
 img {
     display: block;
@@ -128,7 +135,7 @@ img {
 }
 
 img#mobile{
-    display: block;
+    display: none;
 }
 
 img#tablet{
@@ -147,9 +154,207 @@ img#tv{
     display: none;
 }
 
-
+/* media para tablet com  largura de tela menor que 768px para o maior de 992px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
 @media screen and (min-width:768px) and (max-width:992px){
     body{
-        background-image: url(./assets/back-tablet.jpg);
+        background-image: url("/assets/back-tablet.jpg");
+    }
+}
+
+#burger {
+    display: none;
+}
+
+
+menu {
+    display: block;
+    width: 90vw;
+    margin: auto;
+    background-color: #351330;
+}
+
+menu>ul>li {
+    display: inline-block;
+    background-color: #351330;
+
+}
+
+main {
+    width: 90vw;
+    margin: auto;
+}
+
+article>h2 {
+    padding-bottom: 17px;
+    width: 90vw;
+    margin: auto;
+}
+
+article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+}
+
+footer {
+    width: 90vw;
+    margin: auto;
+}
+
+img#mobile {
+    display: none;
+}
+
+img#tablet {
+    display: block;
+}
+
+img#print {
+    display: none;
+}
+
+img#pc {
+    display: none;
+}
+
+img#tv {
+    display: none;
+}
+
+/* media para pc com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image:url("../back-pc.jpg");
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #351330;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        background-color: #351330;
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* media para smart_tv com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image:url("../back-tv.jpg");
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #351330;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        background-color: #351330;
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: block;
     }
 }
