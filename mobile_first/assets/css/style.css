@@ -125,7 +125,7 @@ footer {
 /* configuração e definição de imagens para mobile-first */
 @media screen and (max-width:768px){
     body{
-        background-image: url("/assets/back-phone.jpg");
+        background-image: url("../assets/back-phone.jpg");
     }
 }
 
@@ -161,7 +161,7 @@ deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-bl
 (na horizontal) e sua exibição de imagens */
 @media screen and (min-width:768px) and (max-width:992px){
     body{
-        background-image: url("/assets/back-tablet.jpg");
+        background-image: url("../assets/back-tablet.jpg");
     }
 }
 
